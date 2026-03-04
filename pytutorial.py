@@ -218,3 +218,170 @@ def myfunc():
 
 myfunc()
 
+# If you create a variable with the same name inside a function, this variable will be local, and can only be used inside the function. The global variable with the same name will remain as it was, global and with the original value.
+# Create a variable inside a function, with the same name as the global variable
+x = "awesome"
+
+def myfunc():
+  x = "fantastic"
+  print("Python is " + x)
+
+myfunc()
+
+print("Python is " + x)
+
+# Global Keyword 
+#Normally, when you create a variable inside a function, that variable is local, and can only be used inside that function.
+# To create a global variable inside a function, you can use the global keyword
+# If you use the global keyword, the variable belongs to the global scope
+def myfunc():
+  global x
+  x = "fantastic"
+
+myfunc()
+
+print("Python is " + x)
+
+# To change the value of a global variable inside a function, refer to the variable by using the global keyword:
+x = "awesome"
+
+def myfunc():
+  global x
+  x = "fantastic"
+
+myfunc()
+
+print("Python is " + x)
+
+#----------------------DATA TYPES--------------------
+# Built in Data Types 
+"""
+Text Type:	str
+Numeric Types:	int, float, complex
+Sequence Types:	list, tuple, range
+Mapping Type:	dict
+Set Types:	set, frozenset
+Boolean Type:	bool
+Binary Types:	bytes, bytearray, memoryview
+None Type:	NoneType
+"""
+# Getting Data Types
+# You can get the data type of any object by using the type() function
+# Print the data type of the variable x
+x = 5
+print(type(x))
+
+# Setting Data Type 
+# the data type is set when you assign a value to a variable:
+x = 20
+#display x:
+print(x)
+#display the data type of x:
+print(type(x)) 
+
+# Setting Specific Data Type 
+# want to specify the data type, you can use constructor functions
+x = int(20)
+#display x:
+print(x)
+#display the data type of x:
+print(type(x)) 
+
+#------------------PYTHON NUMBERS--------------------------------
+"""
+There are three numeric types in Python:
+int
+float
+complex
+"""
+# Variables of numeric types are created when you assign a value to them
+x = 1    # int
+y = 2.8  # float
+z = 1j   # complex
+# To verify the type of any object in Python, use the type() function
+print(type(x))
+print(type(y))
+print(type(z))
+
+#INT
+#Int, or integer, is a whole number, positive or negative, without decimals, of unlimited length.
+x = 1
+y = 35656222554887711
+z = -3255522
+print(type(x))
+print(type(y))
+print(type(z))
+
+#FLOAT
+#Float, or "floating point number" is a number, positive or negative, containing one or more decimals.
+x = 1.10
+y = 1.0
+z = -35.59
+print(type(x))
+print(type(y))
+print(type(z))
+#Float can also be scientific numbers with an "e" to indicate the power of 10.
+x = 35e3
+y = 12E4
+z = -87.7e100
+print(type(x))
+print(type(y))
+print(type(z))
+
+#COMPLEX 
+# Complex numbers are written with a "j" as the imaginary part:
+x = 3+5j
+y = 5j
+z = -5j
+print(type(x))
+print(type(y))
+print(type(z))
+
+#Type Conversion 
+# can convert from one type to another with the int(), float(), and complex() methods
+#  cannot convert complex numbers into another number type.
+x = 1    # int
+y = 2.8  # float
+z = 1j   # complex
+#convert from int to float:
+a = float(x)
+#convert from float to int:
+b = int(y)
+#convert from int to complex:
+c = complex(x)
+print(a)
+print(b)
+print(c)
+print(type(a))
+print(type(b))
+print(type(c))
+
+#Random Numbers
+#Python does not have a random() function to make a random number, but Python has a built-in module called random that can be used to make random numbers
+import random
+print(random.randrange(1, 10))
+
+#-----------------------TYPE CASTING----------------------------------
+# There may be times when you want to specify a type on to a variable. This can be done with casting
+# Python is an object-orientated language, and as such it uses classes to define data types, including its primitive types.
+# Casting in python is therefore done using constructor functions:
+"""
+int() - constructs an integer number from an integer literal, a float literal (by removing all decimals), or a string literal (providing the string represents a whole number)
+float() - constructs a float number from an integer literal, a float literal or a string literal (providing the string represents a float or an integer)
+str() - constructs a string from a wide variety of data types, including strings, integer literals and float literals
+"""
+#ints 
+x = int(1)   # x will be 1
+y = int(2.8) # y will be 2
+z = int("3") # z will be 3
+#floats 
+x = float(1)     # x will be 1.0
+y = float(2.8)   # y will be 2.8
+z = float("3")   # z will be 3.0
+w = float("4.2") # w will be 4.2
+#strings 
+x = str("s1") # x will be 's1'
+y = str(2)    # y will be '2'
+z = str(3.0)  # z will be '3.0'
+
+#-------------------STRINGS--------------------------------------

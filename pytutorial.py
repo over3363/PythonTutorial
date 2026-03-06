@@ -1801,3 +1801,66 @@ The or operator has a lower precedence than addition, and we need to calculate t
 The calculation above reads: 4 or 15 or 8 = 4
 """
 
+print("---------------------Left to Right Evaluation--------------------") # PRINTED FOR OUTPUT CLARITY
+# Left to Right Evaluation 
+#If two operators have the same precedence, the expression is evaluated from left to right.
+print(5 + 4 - 7 + 3)
+
+"""
+Additions and subtractions have the same precedence, and we need to calculate from left to right.
+The calculation above reads:
+5 + 4 = 9
+9 - 7 = 2
+2 + 3 = 5
+"""
+
+#Code Challenge 
+print("---------------------CODE CHALLENGE--------------------") # PRINT FOR OUTPUT CLARITY 
+# Create variables
+a=15
+b=4
+# Print modulus
+print(a%b)
+# Print floor division
+print(a//b)
+# Print power
+print(a**b)
+# Add 10 to a
+a+=10
+
+#LISTS
+print("====================LISTS=======================") # PRINTED FOR OUTPUT CLARITY 
+#LIST
+mylist = ["apple", "banana", "cherry"]
+#Lists are used to store multiple items in a single variable.
+# Lists are one of 4 built-in data types in Python used to store collections of data, the other 3 are Tuple, Set, and Dictionary, all with different qualities and usage
+# Lists are created using square brackets
+
+# Create a List
+thislist = ["apple", "banana", "cherry"]
+print(thislist)
+
+#LIST ITEMS
+#List items are ordered, changeable, and allow duplicate values
+#List items are indexed, the first item has index [0], the second item has index [1] etc
+
+#ORDERED
+#When we say that lists are ordered, it means that the items have a defined order, and that order will not change
+#If you add new items to a list, the new items will be placed at the end of the list
+#There are some list methods that will change the order, but in general: the order of the items will not change
+
+#CHANGEABLE 
+#The list is changeable, meaning that we can change, add, and remove items in a list after it has been created
+
+print("--------------------DUPLICATE VALUES---------------------") # PRINTED FOR OUTPUT CLARITY
+#ALLOW DUPLICATES 
+# Since lists are indexed, lists can have items with the same value
+thislist = ["apple", "banana", "cherry", "apple", "cherry"]
+print(thislist)
+
+print("--------------------LIST LENGTH--------------------") # PRINTED FOR OUTPUT CLARITY 
+# LIST LENGTH
+# To determine how many items a list has, use the len() function
+#Print the number of items in the list
+thislist = ["apple", "banana", "cherry"]
+print(len(thislist))

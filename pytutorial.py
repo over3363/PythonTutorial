@@ -1864,3 +1864,59 @@ print("--------------------LIST LENGTH--------------------") # PRINTED FOR OUTPU
 #Print the number of items in the list
 thislist = ["apple", "banana", "cherry"]
 print(len(thislist))
+
+print("--------------------LIST ITEMS-DATA TYPES-----------------------") # PRINTED FOR OUTPUT CLARITY 
+# LIST ITEMS DATA TYPES
+# list items can be of any data type 
+# String , Int , Boolean data types 
+list1 = ["apple", "banana", "cherry"]
+list2 = [1,5,7,9,3]
+list3 = [True, False, False]
+
+# A list can contain different data types 
+# A list with strings, integers and boolean values 
+list1 = ["abc", 34, True, 40, "male"]
+
+print("--------------------TYPE()--------------------") # Printed for output clarity 
+# from pythons perspective lists are defined as objects with data types list
+#<class 'list'>
+
+# what is the data type of a list?
+mylist = ["apple", "banana", "cherry"]
+print(type(mylist))
+
+print("----------------------LIST() CONSTRUCTOR--------------------") # PRINTED FOR OUTPUT CLARITY 
+# it is also possible to use the list() constructor when creating a new list
+# use the list() constructor to make a new list
+thislist = list(("apple", "banana", "cherry")) # note the double round brackets
+print(thislist)
+
+print("----------------------PYTHON COLLECTIONS (arrays)----------------------") # PRINTED FOR OUTPUT CLARITY 
+# There are four collection data types in the Python programming language 
+# List: is a collection which is ordered and changeable. Allows duplicate members
+# Tuple: is a collection which is ordered and uncahngeable. Allows duplicate members 
+# Set: is a collection which is unordered, unchangeable, and unindexed. No duplicate members
+# Dictonary:  is a collection which is ordered and changeable. No duplicate members
+
+# set items are unchangeable, but you can remove and or add items whenever you like
+# As of python version 3.7 dictionaries are ordered. In Python 3.6 and earlier, dictionaries are unordered 
+
+# When choosing a collection type, it is useful to understand the properties of that type. 
+# Choosing the right type for a particular data set could mean retention of meaning and it could mean an increase in efficiency or security
+
+print("=====================ACCESS LIST ITEMS====================") # printed for output clarity 
+print("-----------------------ACCESS ITEMS-----------------------") # printed for output clarity
+# list items are indexed and you can access them by referring to the index number:
+# print the second item of the list
+# note the first item has index 0
+thislist = ["apple","banana","cherry"]
+print(thislist[1])
+
+print("-----------------------NEGATIVE INDEXING--------------------") # printed for outputclarity 
+# negative indexing mean start from the end
+# -1 refers to the last item , -2 refers to the second last item.
+# print the last item of the list
+thislist = ["apple","banana","cherry"]
+print(thislist[-1])
+
+print("--------------------RANGE OF INDEXES----------------------") # printed for output clarity 

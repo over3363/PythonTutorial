@@ -1938,3 +1938,55 @@ print(thislist[:4])
 thislist = ["apple","banana", "cherry", "orange", "kiwi", "melon", "mango"]
 print(thislist[2:])
 
+print("-----------------------RANGE OF NEGATIVE INDEXES-----------------------") # printed for output clarity 
+# specifying negative indexes if you want to start the search from the end of the list
+# returns the items from "orange" (-4) to , but NOT including "mango" (-1)
+thislist = ["apple", "banana", "cherry", "orange", "kiwi", "melon", "mango"]
+print(thislist[-4:-1])
+
+print("--------------------Check if Item Exists-----------------------") # printed for output clarity 
+#to determine if a speciified item is present in a list use the in keyword
+#check if apple is present in the list
+thislist = ["apple", "banana", "cherry"]
+if "apple" in thislist: 
+    print("Yes, 'apple' is in the fruits list")
+
+print("=======================CHANGE LIST ITEMS=======================") # printed for output clarity 
+print("-----------------------Change Item Value-----------------------") # printed for output clarity 
+# to change the value of a specific item, refer to the index number 
+# change the second item 
+thislist = ["apple", "banana", "cherry"]
+thislist[1] = "blackcurrant"
+print(thislist)
+
+print("--------------------Change A Range of Item Values---------------------") # printed for output clarity 
+# to change the value of items within a specific range, define a list with the new values
+# and refer to the range of index numbers where you want to insert the new values
+
+# change the values "banana" and "cherry" with the values "blackcurrant" and "watermelon"
+thislist = ["apple","banana","cherry","orange","kiwi","mango"]
+thislist[1:3] = ["blackcurrant", "watermelon"]
+print(thislist)
+
+# if you insert more items than you replace, the new items will be inserted where you specified and the remaining items will move accordingly 
+# change the second value by replacing it with two new values
+thislist = ["apple", "banana", "cherry"]
+thislist[1:2] = ["blackcurrant", "watermelon"]
+print(thislist)
+# the length of the list will change when the number of items inserted does not match the number of items replaced
+
+# if you insert less items than you replace, the new items will be inserted where you specified and the remaining items will move accordingly 
+# change the second and third value by replacing it with one value 
+thislist = ["apple", "banana", "cherry"]
+thislist[1:3] = ["watermelon"]
+print(thislist)
+
+print("--------------------INSERT ITEMS----------------------") # printed for output clarity 
+# to insert a new list item, without replacing any of the existing values, we can use the insert() method
+# the insert() method inserts an item at the specified index 
+# insert watermelon as the third item 
+thislist = ["apple", "banana", "cherry"]
+thislist.insert(2, "watermelon")
+print(thislist)
+# the list will now contain 4 items
+

@@ -1990,3 +1990,75 @@ thislist.insert(2, "watermelon")
 print(thislist)
 # the list will now contain 4 items
 
+print("=====================ADD LIST ITEMS=======================") # printed for output clarity 
+print("--------------------Append Items---------------------") # printed for output clarity 
+# to add an item to the end fo the list, use the append() method
+# using the append() method to append an item 
+thislist = ["apple", "banana", "cherry"]
+thislist.append("orange")
+print(thislist)
+
+print("--------------------INSERT ITEMS----------------------") # printed for output clarity 
+# to insert a list item at a specified index, use the insert() method 
+# the insert() method inserts an item at the specified index 
+# insert an item as the second position 
+thislist = ["apple", "banana", "cherry"]
+thislist.insert(1, "orange")
+print(thislist)
+# the list will now contain 4 items
+
+print("----------------------EXTEND LIST--------------------") # printed for output clairty 
+# to append elements from another list to the current list use the extend() method
+# add the elements of tropical to thislist
+thislist = ["apple", "banana", "cherry"]
+tropical = ["mango", "pineapple", "papaya"]
+thislist.extend(tropical)
+print(thislist)
+# the elements will be added to the end of the list 
+
+print("--------------------ADD ANY ITERABLE----------------------") # printed for output clairty 
+# the extend() method does not have to append lists, you can add any iterable object (tuples, sets, dictionaries)
+# add elements of a tuple to a list
+thislist = ["apple", "banana", "cherry"]
+thistuple = ("kiwi", "orange")
+thislist.extend(thistuple)
+print(thislist)
+
+print("====================REMOVE LIST ITEM====================") # printed for output clarity 
+print("-----------------------REMOVE SPECIFIED ITEM-----------------------") # printed for output clarity 
+# the remove() method removes the specified item 
+# remove banana 
+thislist = ["apple", "banana", "cherry"]
+thislist.remove("banana")
+print(thislist)
+
+# if there are more than one item with the specified value the remove method removes the first occurance
+# remove the first occurrence of "banana"
+thislist = ["apple", "banana", "cherry", "banana", "kiwi"]
+thislist.remove("banana")
+print(thislist)
+
+print("----------------------REMOVE SPECIFIED INDEX-----------------------") # printed for output clarity 
+# the pop() method removes the specified index 
+# remove the second item 
+thislist = ["apple", "banana", "cherry"]
+thislist.pop(1)
+print(thislist)
+
+# if you do not specify the index, the pop() method removes the last item 
+# remove the last item 
+thislist = ["apple", "banana", "cherry"]
+thislist.pop()
+print(thislist)
+
+# the del keyword also removes the specified index 
+# remove the first item 
+thislist = ["apple", "banana", "cherry"]
+del thislist[0]
+print(thislist)
+
+# the del keyword can also delete the list completely 
+# delete the entire list 
+thislist = ["apple", "banana", "cherry"]
+del thislist
+

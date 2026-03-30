@@ -2062,3 +2062,88 @@ print(thislist)
 thislist = ["apple", "banana", "cherry"]
 del thislist
 
+print("---------------------CLEAR THE LIST----------------------") # printed for output clarity 
+# the clear() method empties the list
+# the list still remains but it has no content
+# clear the list content 
+thislist = ["apple", "banana", "cherry"]
+thislist.clear()
+print(thislist)
+
+print("=====================LOOP LISTS====================") # printed for output clarity
+# can loop through the list items by using a for loop
+# print all items in the list, one by one 
+thislist = ["apple", "banana", "cherry"]
+for x in thislist:
+    print(x)
+
+print("-----------------------LOOP THROUGH THE INDEX NUMBERS--------------------") # printed for output clarity 
+# you can also loop through the list items by referring to their index number 
+# use the range() and len() functions to create a suitable iterable 
+# print all items by refering to their index number:
+thislist = ["apple", "banana", "cherry"]
+for i in range(len(thislist)):
+    print(thislist[i])
+# the iterable created is [0,1,2]
+
+print("--------------------USING A WHILE LOOP----------------------") # printed for output clarity 
+# you can loop through the list items by using a while loop 
+# use the length function to determine the length of the list, then start at 0 and loop your way through the list items by referring to their indexes
+# remember to increase the index by 1 after each iteration 
+thislist = ["apple", "banana", "cherry"]
+i = 0
+while i < len(thislist):
+   print(thislist[i])
+   i = i + 1
+
+print("---------------------LOOPING USING LIST COMPREHENSION--------------------") # printed for output clarity 
+# list comprehension offers the shortest syntax for looping through lists 
+# a short hand for loop that will print all items in the list
+thislist = ["apple", "banana", "cherry"]
+[print(x) for x in thislist]
+
+print("=====================LIST COMPREHENSION====================") # printed for output clarity 
+print("-----------------------LIST COMPHRENSION-----------------------") # printed for output clarity 
+# List comphrension offers a shorter syntax when you want to create a new list based on the values of an existing list 
+# based on a list of fruits, you want a new list, containing only the fruits with the letter "a" in the name 
+# without list comphrension you would have to write a for statment with a conditional test inside 
+fruits = ["apple", "banana", "cherry", "kiwi", "mango"]
+newlist = []
+for x in fruits:
+    if "a" in x:
+       newlist.append(x)
+print(newlist)
+
+# with list comphrension you can do this in one line of code 
+fruits = ["apple", "banana", "cherry", "kiwi", "mango"]
+newlist = [x for x in fruits if "a" in x]
+print(newlist)
+
+print("---------------------SYNTAX----------------") # printed for output clarity 
+# newlist = [expression for item in iterable if condition == True]
+# the return value is a new list leaving the old list unchanged 
+print("---------------------CONDITION--------------------") # printed for output clarity 
+# the condition is like a filter that only accepts the items that evaluate to True 
+# only accepts items that are not apple 
+newlist = [x for x in fruits if x != "apple"]
+# print(newlist)
+# the condition if x != "apple" will return True for all elements other than "apple" 
+# making the new list contain all the fruits except "apple"
+# the condition is optional and can be omitted 
+# with no if statment 
+newlist = [x for x in fruits]
+#print(newlist)
+
+print("---------------------ITERABLE-----------------------") # printed for output clarity 
+# the iterable can be any iterable object  ( list , tuple, set exc)
+# you can use the range() function to create an iterable 
+newlist = [x for x in range(10)]
+# with condition 
+newlist = [x for x in range(10) if x < 5]
+
+print("----------------------EXPRESSION-----------------------") # printed for output clarity 
+# the expression is the current item in the iteration, but it is also the outcome
+# which you can manipulate before it ends up like a list item in the new list 
+
+
+
